@@ -1,0 +1,20 @@
+.prototype-heading{
+    margin-top: 150px;
+}
+
+.underline{
+    width: 180px;
+    height: 5px;
+    margin-top: -10px;
+    background-color: blue;
+}
+.flex-video-details{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.details{
+    justify-content: baseline;
+    width: 55%;
+    margin-left: 30px;
+}

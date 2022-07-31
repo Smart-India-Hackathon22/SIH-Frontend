@@ -1,0 +1,394 @@
+/* Right side separated are the comments for the css  */
+
+
+.flex-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+
+.container{
+    width: 100%;
+    height:100% ;
+    display: flex;
+    flex-direction: space-around;       
+    /* background-color: lightblue; */
+
+}
+.wrap{
+   
+    width: 300px;
+    height: 100%;
+    background-color: rgb(50, 51, 52);
+
+}
+
+.container header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    color: white;
+    padding-left: 50px;
+    line-height: 70px;
+    background-color: rgb(233, 233, 233);
+    user-select: none;
+}
+.link1{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center  ;
+    /* background-color: blue; */
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    margin-right: 50px;
+  margin-left: -30px;
+  cursor: pointer;
+    /* padding-right: 50px; */
+    /* border-bottom: 1px solid white; */
+}
+.link1:hover{
+    color: salmon;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    text-align: center;
+
+    
+    /* border-bottom: 3px solid black; */
+    
+}
+.link2{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center  ;
+    /* background-color: blue; */
+    width: 100px;
+    font-size: 20px;
+    margin-right: 80px;
+  
+    /* padding-right: 50px; */
+    /* border-bottom: 1px solid white; */
+}
+.link2:hover{
+    color: salmon;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    text-align: center;
+
+    
+    /* border-bottom: 3px solid black; */
+    
+}
+
+.container ul a{
+    display: block;
+    height: 70px;
+    width: 100%; cursor: pointer;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 50px;
+    border-top: 1px solid rgba(255,255,255, 0.2);
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+
+}
+.container li:hover a{
+    padding-left: 55px;
+    background-color: salmon;
+
+}
+
+
+.register{
+    background-color: rgb(229, 175, 169);
+    color: black;
+    width: 100%;
+    height: 862px; 
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.registration-heading{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+}
+.flex-heading-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.register-body{
+    width: 98%;
+    height: 780px;
+    background-color: rgba(228, 221, 221, 0.916);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+.label{
+    font-size: 18px;
+    /* color: black; */
+    padding-left: 20px;
+    /* margin-right: 30px; */
+}
+::placeholder{
+    padding-left: 10px;
+}
+.reg-no{
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-right: 50px;
+}
+.reg-date{
+    width: 130px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.underline{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.personal-details{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 18px;
+    /* color: black; */
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.select-title{
+    width: 60px;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: -20px;
+}
+
+.flex-personal-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    /* justify-content: space-between; */
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.flex-personal-details .fname, .mname, .lname, .dob, .age, .gender, .bloodgroup, .status , .occupation, .citizen, .email, .contactno{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.name{
+    width: 200px;
+    height: 30px;
+}
+.reg-dob{
+    width: 200px;
+    height: 30px;
+}
+.reg-age{
+    width: 200px;
+    height: 30px;
+}
+.reg-gender{
+    width: 200px;
+    height: 30px;
+}
+
+.reg-bloodgroup{
+    width: 200px;
+    height: 30px;
+}
+.reg-status{
+    width: 200px;
+    height: 30px;
+}
+.reg-occupation{
+    width: 200px;
+    height: 30px;
+}
+.reg-phno{
+    width: 200px;
+    height: 30px;
+}
+.reg-email{
+    width: 200px;
+    height: 30px;
+}
+.reg-citizen{
+    width: 200px;
+    height: 30px;
+}
+.reg-address{
+    width: 200px;
+    height: 30px;
+}
+.reg-city{
+    width: 200px;
+    height: 30px;
+}
+.reg-state{
+    width: 200px;
+    height: 30px;
+}
+.reg-pincode{
+    width: 200px;
+    height: 30px;
+}
+.address-details{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 18px;
+    /* color: black; */
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.flex-address-details-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    /* justify-content: space-between; */
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.flex-address-details-1 .address, .pincode, .city, .state, .country, .landline{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+.flex-payer-info .payer-name, .payer-relation, .payer-amount{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+/* .flex-address-details-1 .pincode{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+} */
+/* .flex-address-details-2{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-top: 10px;
+} */
+
+.flex-address-details-1 input{
+    margin-left: -100px;
+}
+.flex-personal-details input ,select{
+    margin-left: -100px;
+}
+
+.reg-country{
+    width: 200px;
+    height: 30px;
+}
+.reg-state{
+    width: 200px;
+    height: 30px;
+}
+.reg-city{
+    width: 200px;
+    height: 30px;
+}
+.reg-pincode{
+    width: 200px;
+    height: 30px;
+}
+.reg-landline{
+    width: 200px;
+    height: 30px;
+}
+.payer-information-details{
+    /* font-family: 'Courier New', Courier, monospace; */
+   
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.flex-payer-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    /* justify-content: space-between; */
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.flex-payer-info input{
+    margin-left: -100px;
+}
+
+.reg-payer-name{
+    width: 200px;
+    height: 30px;
+}
+.reg-payer-relation{
+    width: 200px;
+    height: 30px;
+}
+.reg-payer-amount{
+    width: 200px;
+    height: 30px;
+}
+.clear-button{
+    background-color: red;
+    color: white;
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+.clear-button:hover{
+    background-color: #b51d1d;
+    color: white;
+    transition: 0.5s;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid rgb(244, 52, 52);
+}
+.submit-button{
+    background-color: green;
+    margin-left: 60px;
+    margin-top: 50px;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+.submit-button:hover{
+    background-color: #1bc21b;
+    color: white;
+    transition: 0.5s;
+}
+

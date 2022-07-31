@@ -1,0 +1,31 @@
+.Footer {
+    /* margin-top: 150px; */
+    width: 100%;
+}
+.Footer .FooterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: var(--footerColor);
+}
+.Footer .box {
+    display: inline-block;
+    width: 50%;
+}
+
+.Footer .box#box-left {
+    padding-left: 55px;
+}
+.Footer .box#box-right {
+    padding-right: 55px;
+    margin-top: 55px;
+}
+.Footer .logo {
+    flex-basis: clamp(15vw, 20%, 30vw);
+    margin: 10px 5px;
+}
+.Footer .Copyright {
+    font-weight: 800;
+    font-size: 12px;
+}
