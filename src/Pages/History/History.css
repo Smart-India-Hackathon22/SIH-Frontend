@@ -1,0 +1,49 @@
+.history-card{
+    width: 60%;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    padding: 10px;
+    margin-left: 550px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    background-color: rgb(216, 211, 210);
+}
+.history-tbl{
+    margin-left: 20px;
+    width: 97%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.patientname, .patientdob, .patientgender, .patientage, .patientaddress, .patientbloodgrp, .patientemail, .patientnumber{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1px;
+}
+.patient-summary-haeding{
+    padding-top: 90px;
+}
+h4{
+    padding-top: 7px;
+}
+
+.uhid{
+    border: none;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.uid{
+    display: flex;
+    margin-bottom: 30px;
+}

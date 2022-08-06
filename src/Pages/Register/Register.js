@@ -6,6 +6,10 @@ import Navbar from "../../Components/Navbar/Navbar";
 import "../../CSS/Register.css";
 import { Link } from "react-router-dom";
 
+import items from "../../Components/Sidebar/Sidebar.json"
+import SidebarItem from "../../Components/Sidebar/SidebarItem"
+import "../../CSS/Sidebar.css";
+
 import "../../CSS/Register.css";
 function Register() {
   const [bg, changeBGColor] = React.useState(1);
@@ -16,72 +20,10 @@ function Register() {
         <section>
           <>
             <div className="container">
-              <div className="wrap">
-                <ul>
-                  <li>
-                    <Link
-                      to="/register"
-                      onClick={() => changeBGColor(1)}
-                      style={{
-                        backgroundColor:
-                          bg === 1 ? "salmon" : " rgb(50, 51, 52)",
-                      }}
-                    >
-                      Register
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/history"
-                      onClick={() => changeBGColor(2)}
-                      style={{
-                        backgroundColor:
-                          bg === 2 ? "salmon" : " rgb(50, 51, 52)",
-                      }}
-                    >
-                      History
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/addrole"
-                      onClick={() => changeBGColor(3)}
-                      style={{
-                        backgroundColor:
-                          bg === 3 ? "salmon" : " rgb(50, 51, 52)",
-                      }}
-                    >
-                      AddRole
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/details"
-                      onClick={() => changeBGColor(4)}
-                      style={{
-                        backgroundColor:
-                          bg === 4 ? "salmon" : " rgb(50, 51, 52)",
-                      }}
-                    >
-                      Doctor-Details
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/livestatus"
-                      onClick={() => changeBGColor(5)}
-                      style={{
-                        backgroundColor:
-                          bg === 5 ? "salmon" : " rgb(50, 51, 52)",
-                      }}
-                    >
-                      Availability
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+            <div className="wrap">
+    { items.map((item, index) => <SidebarItem key={index} item={item} />) }
+    </div>
+            
               <section className="register">
                 <div className="flex-heading-btn">
                   <h1 className="registration-heading">

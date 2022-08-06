@@ -12,6 +12,14 @@ import Aboutus from '../src/Pages/Aboutus'
 import Contactus from '../src/Pages/Contactus'
 import Receptionist from './Pages/Receptionist'
 import Navbar from './Components/Navbar/Navbar'
+import Sidebar from './Components/Sidebar/Sidebar'
+import Discharge from './Components/Discharge/Discharge'
+
+import Admin from './Pages/Admin/Admin'
+import History from './Pages/History/History'
+import Doctor from './Pages/Doctor/Doctor'
+import OPD from './Pages/OPD/OPD'
+import IPD from './Pages/IPD/IPD'
 
 
 
@@ -21,7 +29,8 @@ function App() {
      
       <Router>
       <Navbar />
-      <Header />
+      {/* <Header />   */}
+      {/* <Sidebar /> */}
      
 
         <Routes>
@@ -29,6 +38,13 @@ function App() {
           <Route  path="/" element={<Home />} />
           {/* <Route  path="/header" element={<Header />} /> */}
           <Route  path="/register" element={<Register />} />
+          <Route  path="/history" element={<History />} />
+          <Route  path="/admin" element={<Admin />} />
+          {/* <Route  path="/nurse" element={<Nurse />} /> */}
+          <Route  path="/opduser" element={<OPD />} />
+          <Route  path="/ipduser" element={<IPD />} />
+          <Route  path="/dischargesummary" element={<Discharge />} />
+          <Route  path="/doctordetail" element={<Doctor />} />
           <Route  path="/login" element={<Login />} />
           <Route  path="/prototype" element={<Prototype />} />
           <Route  path="/aboutus" element={<Aboutus />} />

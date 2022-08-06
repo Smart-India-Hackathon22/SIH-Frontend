@@ -9,63 +9,71 @@ function Contactus() {
     <>
 
     {/* <div className='text'>Contactus</div> */}
-    <div id="background-img-slide">
+    <Header />
                         <section className="career-statics">
 
-                            <div className="flex-statistics">
+                            <div className="statistic1">
                             
                             <div className="candidates"> 
-                            <CountUp start={0} end={20000} delay={0}>
+                            <CountUp start={0} end={200000} delay={0}>
                             {({ countUpRef }) => (
-                                <div>
+                                <div className='counttext'>
                                 <span ref={countUpRef} />
                                 </div>
                             )}
                             </CountUp>
-                            <h1 className="detail1">Out Patient</h1>
+                            <h1 className="detail">Bed Available</h1>
 
                         </div>                   
+                        </div>   
+
+                          <div className="statistic1">                
 
                         <div className="candidates"> 
-                            <CountUp start={0} end={60000} delay={0}>
+                            <CountUp start={0} end={600000} delay={0}>
                             {({ countUpRef }) => (
-                                <div>
+                                <div className='counttext'>
                                 <span ref={countUpRef} />
                                 </div>
                             )}
                             </CountUp>
-                            <h1 className="detail2">Recoverd patient</h1>
+                            <h1 className="detail">Recoverd patient</h1>
 
                         </div>                   
+                        </div>
+
+                        <div className="statistic1">                 
 
                         <div className="candidates"> 
-                            <CountUp start={0} end={90000} delay={0}>
+                            <CountUp start={0} end={900000} delay={0}>
                             {({ countUpRef }) => (
-                                <div>
+                                <div className='counttext'>
                                 <span ref={countUpRef} />
                                 </div>
                             )}
                             </CountUp>
-                            <h1 className="detail3">Open Hospital</h1>
+                            <h1 className="detail">In Patient </h1>
 
                         </div>  
+                        </div>  
+                        
+                        <div className="statistic1">                 
 
                          <div className="candidates"> 
-                            <CountUp start={0} end={900} delay={0}>
+                            <CountUp start={0} end={9} delay={0}>
                             {({ countUpRef }) => (
-                                <div>
+                                <div className='counttext'>
                                 <span ref={countUpRef} />
                                 </div>
                             )}
                             </CountUp>
-                        <h1 className="detail4">In Patient</h1>
+                        <h1 className="detail">Open Hospital</h1>
                         </div>      
 
                              </div>
 
                    
                         </section>
-                    </div>
     </>
   )
 }

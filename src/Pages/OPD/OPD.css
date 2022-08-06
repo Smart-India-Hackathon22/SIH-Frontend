@@ -1,0 +1,161 @@
+.opduser{
+    background-color: rgb(178, 180, 182);
+    color: black;
+    width: 100%;
+    height: 862px; 
+    padding-left: 30px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.opduser-container{
+    width: 75%;
+    height: 700px;
+    background-color: rgba(228, 221, 221, 0.916);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+.opd-user-diagnosis{
+    width: 180px;
+    height: 30px;
+}
+.diagnosis{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+.diagnosis-heading{
+    padding-left: 20px;
+}
+.opd-user-symptoms{
+    width: 580px;
+    height: 30px;
+}
+.symptoms{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+.symptoms-heading{
+    padding-left: 20px;
+}
+
+.opd-data-entry{
+    margin-top: 70px;
+    
+}
+.opd-entry-container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.opd-entrydata-table{
+    margin-left: -60px;
+    margin-top: 5px;
+}
+.opd-table{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 18px;
+    /* background-color: #fff; */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.opd-table th{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.opd-table td{
+    /* background-color: #fff; */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.popup-container{
+    width: 20%;
+    height: 700px;
+    background-color: rgba(228, 221, 221, 0.916);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dialog-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.referesh-btn{
+    border: none;
+    width: 150px;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 7px;
+}
+
+.close-btn{
+    border: none;
+    width: 120px;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.opd-patient-list{
+    width: 100%;
+    height: 450px;
+    margin-top: 10px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+.dialog-buttons-2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.ipd-btn{
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.stock-btn{
+    border: none;
+    width: 180px;
+    border-radius: 7px;
+    height: 30px;
+    cursor: pointer;
+
+}
+.save{
+    border: none;
+    width: 100%;
+    height: 30px;
+    border-radius: 7px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}

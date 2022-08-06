@@ -1,0 +1,16 @@
+.discharge-uhid{
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.uhid-heading{
+     margin-top:5px;
+     font-size: 23px;
+    color: black;
+}
+.discharge-uhid-input{
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+}

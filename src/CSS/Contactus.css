@@ -1,77 +1,31 @@
-
-
-.text{
-    padding-top: 50px;
-}
-
-
-.image{
-    background: white;
-    /* background-image: linear-gradient(to right, rgba(255,255,255,0.5),  rgba(255,255,255,0.7)),url(../views/Images/bg3.jpg); */
-    width: 100%;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.image .flex-image .img-container{
-    /* background-image: url(../Assets/Images/icon3.png); */
-    background-repeat: no-repeat;
-    padding-left: 550px;
-    height: 50vh;
-}
-.image .flex-image{
-  display: flex;
-  justify-content:space-between;
-
-}
-.image .web-heading{
-  font-family:Arial, Helvetica, sans-serif;
-  margin-left: 0%;
-  padding-left: 0%;
-  padding-top: 50px;
-  color: navy;
-}
-
-
-
-
   .career-statics {
-    background-color: blue;
-    width: 100%;
+    width: 990px;
     height: 70vh;
-    opacity: 0.7;
-  }
-   .career-statics .heading1 {
-    color: rgb(255, 255, 255);
-  }
-  
-   .career-statics .flex-statistics{
-  display: flex;
-  justify-content: space-around;
-  
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 0px;
+    margin-left: 300px;
   }
   
-   .career-statics .flex-statistics .candidates{
-  /* padding:30px 70px; */
-  color: white;
-  font-size: 3.5rem;
-  }
-  
-   .career-statics .detail1{
-  color: white;
-  font-size: 0.7rem;
-  }
-   .career-statics .detail2{
-  color: white;
-  font-size: 0.7rem;
-  }
-   .career-statics .detail3{
-  color: white;
-  font-size: 0.7rem;
-  }
-   .career-statics .detail4{
-  
-  color: white;
-  font-size: 0.7rem;
-  }
+.counttext{
+  font-size: 80px;
+}
+
+.candidates{
+  text-align: center;
+  padding-top: 80px;
+}
+
+.statistic1{
+  width: 400px;
+  height: 300px;
+  background-color: rgb(219, 215, 215);
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.detail{
+  text-align: center;
+  padding-top: 60px;
+}

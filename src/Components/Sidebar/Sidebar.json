@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Patient Registration",
+        "icon": "bi-question-circle-fill",
+        "path": "/register"
+    },
+    {
+        "title": "History",
+        "icon": "bi-bug",
+        "path": "/history"
+    },
+    {
+        "title": "Add Role",
+        "icon": "bi-gear-fill",
+        "path": "/admin"
+       
+    },
+    {
+        "title": "Doctor Details",
+        "icon": "bi-question-circle-fill",
+        "path": "/doctordetail"
+    },
+
+    
+    {
+        "title": "Live Status",
+        "icon": "bi-view-list",
+        "path": "/livestatus"
+    },
+    {
+        "title": "Discharge Summary",
+        "icon": "bi-view-list",
+        "path": "/dischargesummary"
+    }
+
+   
+]
