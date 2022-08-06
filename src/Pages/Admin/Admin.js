@@ -3,6 +3,9 @@ import "./Admin.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
+import Navbar from '../../Components/Navbar/Navbar'
+
+
 
 // After Admin path add this comment to the slide bar.json file
 // "childrens": [
@@ -49,6 +52,8 @@ import "../../CSS/Sidebar.css";
 function Admin() {
   return (
   <>
+    <Navbar />
+
        <div className="container">
             <div className="wrap">
     { items.map((item, index) => <SidebarItem key={index} item={item} />) }

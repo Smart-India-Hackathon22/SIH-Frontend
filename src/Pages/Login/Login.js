@@ -3,53 +3,47 @@ import '../../CSS/Login.css'
 import {Button} from "@mui/material";
 import introimg from "../../../src/Assets/Images/intro.png";
 import { Link } from 'react-router-dom';
+import Navbar from '../../Components/Navbar/Navbar'
+
 
 function Login() {
   return (
    <>
-    <div className='login-container'>
+    <Navbar />
 
-    <div className='img-slider'>
-    <img src={introimg} alt='intro'/>
-    </div>
+   <div className='login-card'>
+    <div className='login-card-header'>
+    <center>
+    <h1>Login Page</h1>
+    </center>
+       </div>
 
-    <div className='login-form'>
-    
-    <h1 className='login-heading'>Login</h1>
-    <form>
+        {/* <div className='login-card-body'> */}
+        <form>
+        <div className='form-group'>
+        <input type='text' className='form-control' placeholder='Username' />
+        <input type='password' className='form-control' placeholder='Passowrd' />
+        <select  className='form-control'>
+          <option value='Select'>Select Role</option>
+          <option value='Admin'>Admin</option>
+          <option value='User'>Receptionist</option>
+          <option value='User'>Nurse</option>
+          <option value='User'>OPD User</option>
+          <option value='User'>IPD User</option>
 
-    <div className='flex-email'>
-    <input type='email' className='email' placeholder='Enter your email' required/>
-    </div>
-    <br />
-    <br />
-    <div className='flex-password'>
-    <input type='password'  className="pass" placeholder='Enter your password' required />
-    </div>
-    <br />
-    <br />
+        </select>
 
-
-    <div className='flex-usertype'>
-    <select className="usertype" id="usertype" required>
-                                    <option value="0">select usertype</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Patient</option>
-                                    <option value="3">OPD User</option>
-                                    <option value="4">IPD User</option>
-                                    <option value="5">Nurse</option>
-                                    <option value="6">receptionist</option>
-                                </select>
-    </div>
-                               
-                                <br />
-                                <br />
-          <div className='flex-btn'>
-          <Button className='login-btn'><Link to="/receptionist">Login</Link></Button>
-          </div>
-    </form>
-    </div>
-    </div>
+       </div> 
+       <center>
+       <button className='login-btn'>LOGIN</button>
+       <div className='register-link'>
+       <h5 className='user-heading'>New User ? </h5> <Link to="/register"> Sign-up </Link>  
+       </div>
+       <Link to ="/forgetpassword" >Forget Username or Password ? </Link>      
+       </center>
+       </form>
+       
+       </div> 
    </>
   )
 }

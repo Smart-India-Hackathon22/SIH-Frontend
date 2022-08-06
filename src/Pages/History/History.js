@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../Components/Header/Header';
 import "./History.css";
+import Navbar from '../../Components/Navbar/Navbar'
 
 
 import items from "../../Components/Sidebar/Sidebar.json"
@@ -10,6 +11,8 @@ import "../../CSS/Sidebar.css";
 function History() {
   return (
    <>
+    <Navbar />
+
     <Header />
 
     <div className='history'>

@@ -2,11 +2,15 @@ import React from 'react'
 import items from "../../Components/Sidebar/Sidebar.json"
 import SidebarItem from "../../Components/Sidebar/SidebarItem"
 import "../../CSS/Sidebar.css";
+import Navbar from '../../Components/Navbar/Navbar'
+
 import "./IPD.css"
 
 function IPD() {
   return (
     <>
+    <Navbar />
+
     <div className="container">
          <div className="wrap">
  { items.map((item, index) => <SidebarItem key={index} item={item} />) }

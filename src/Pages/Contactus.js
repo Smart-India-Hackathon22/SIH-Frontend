@@ -2,11 +2,14 @@ import React from 'react'
 import CountUp from 'react-countup';
 import "../../src/CSS/Contactus.css";
 import Header from '../Components/Header/Header'
+import Navbar from '../Components/Navbar/Navbar'
 
 
 function Contactus() {
   return (
     <>
+    <Navbar />
+
 
     {/* <div className='text'>Contactus</div> */}
     <Header />

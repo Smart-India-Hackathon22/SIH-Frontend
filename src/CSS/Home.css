@@ -5,3 +5,67 @@
     padding-left: 60px;
     color: rgb(35, 26, 85);
   }
+
+  .background-img{
+    
+    background-image: url('../Assets/Images/hospital2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    height: 100vh;
+    /* filter: blur(3px); */
+    width: 100%;
+  }
+
+  .login-card{
+   
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    top: 150px;
+    left: 1400px;
+    
+
+  }
+  .login-card-header{
+    background-color: rgb(35, 26, 85);
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+
+  .form-group{
+    margin-top: 50px;
+  }
+  .form-control{
+    width: 400px;
+    height: 60px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .login-btn{
+    border: none;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(35, 26, 85);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .register-link{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .user-heading{
+    margin-right: 10px;
+  }

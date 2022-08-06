@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Doctor.css";
 import Header from "../../Components/Header/Header";
+import Navbar from '../../Components/Navbar/Navbar'
 
 import items from "../../Components/Sidebar/Sidebar.json"
 import SidebarItem from "../../Components/Sidebar/SidebarItem"
@@ -8,6 +9,8 @@ import "../../CSS/Sidebar.css";
 function Doctor() {
   return (
     <>
+    <Navbar />
+
     <div className='flex-doctor-details'>
    {/* <Header /> */}
     <div className='detail'>
