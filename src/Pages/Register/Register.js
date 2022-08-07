@@ -27,6 +27,7 @@ function Register() {
     </div>
             
               <section className="register">
+             <form>
                 <div className="flex-heading-btn">
                   <h1 className="registration-heading">
                     {" "}
@@ -59,6 +60,14 @@ function Register() {
 
                   <label className="label">Registration Date.</label>
                   <input type="date" className="reg-date" required />
+
+                  <label className="label">Patient Type.</label>
+                  <select className="reg-patient-type" required>
+                                  <option>Select Patient type</option>
+                                  <option>NEW </option>
+                                  <option>OLD</option>
+                                  <option>TRANSFER</option>
+                                </select>
 
                   <div className="personal-details">
                   <h1 className="registration-heading">
@@ -108,7 +117,7 @@ function Register() {
                                 <input
                                   type="number"
                                   className="reg-age"
-                                  placeholder="Age"
+                                  placeholder="Age *"
                                   required
                                 />
                               </div>
@@ -145,12 +154,16 @@ function Register() {
                               </div>
                               <div className="occupation">
                                 <label className="label">Occupation</label>
-                                <input type="text" className="reg-occupation" />
+                                <select  className="reg-occupation">
+                                  <option>Select Occupation</option>
+                                  <option>Service</option>
+                                  <option>Business</option>
+                                </select>
                               </div>
                               <div className="citizen">
-                                <label className="label">citizen</label>
+                                <label className="label">Nationality</label>
                                 <select className="reg-citizen" required>
-                                  <option>Citizen</option>
+                                  <option>Select Nationality</option>
                                   <option>Indian</option>
                                   <option>Foreigner</option>
                                 </select>
@@ -226,14 +239,14 @@ function Register() {
                           placeholder="Country"
                         />
                       </div>
-                      <div className="landline">
+                      {/* <div className="landline">
                         <label className="label"> Landline</label>
                         <input
                           type="text"
                           className="reg-landline"
                           placeholder="12 digit No"
                         />
-                      </div>
+                      </div> */}
                     </div>
                     {/* <div className="flex-address-details-2">
                       
@@ -243,7 +256,7 @@ function Register() {
                   <div className="payer-information-details">
                   <h1 className="registration-heading">
                     {" "}
-                    Payer Information
+                    Payment Information
                   </h1>
                     <div className="underline"></div>
                     <div className="flex-payer-info">
@@ -277,12 +290,48 @@ function Register() {
                     </div>
                   </div>
 
+                  <div className="allotment-details">
+                  <h1 className="registration-heading">
+                    {" "}
+                    Allotment Information
+                  </h1>
+                    <div className="underline"></div>
+                    <div className="flex-allotment-info">
+                      <div className="doctor-name">
+                        <label className="label">Doctor Name</label>
+                        <input
+                          type="text"
+                          className="referred-doctor-name"
+                          placeholder="Doctor-name *"
+                          required
+                        />
+                      </div>
+                      <div className="symptoms-name">
+                        <label className="label">Symptoms</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name"
+                          placeholder="Symptoms"
+                        />
+                      </div>
+                      <div className="room-no">
+                        <label className="label">Room No.</label>
+                        <input
+                          type="number"
+                          className="referred-room-no"
+                          placeholder="Room-No."
+                        />
+                      </div>
+                  </div>
+                  </div>
+
                   {/* Clear Form Button and Submit Form button */}
                   <center>
                     <button className="clear-button">CLEAR</button>
                     <button className="submit-button">SUBMIT</button>
                   </center>
                 </div>
+                </form>
               </section>
             </div>
           </>

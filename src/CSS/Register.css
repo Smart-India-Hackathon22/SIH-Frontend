@@ -116,7 +116,8 @@
     background-color: rgb(178, 180, 182);
     color: black;
     width: 100%;
-    height: 862px; 
+    max-height: 100%;
+    /* height: 962px;  */
     padding-left: 30px;
     padding-top: 20px;
 }
@@ -137,9 +138,14 @@
     padding-left: 20px;
     padding-right: 20px;
     margin-right: 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding-bottom: 20px;
 
+}
+.reg-patient-type{
+    width: 180px;
+    height: 30px;
+    margin-left: 20px;
 }
 .label{
     font-size: 18px;
@@ -194,66 +200,40 @@
     margin-right: 20px;
     margin-top: 20px;
 }
+.allotment-details{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 18px;
+    /* color: black; */
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.flex-allotment-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    /* justify-content: space-between; */
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.flex-allotment-info .doctor-name, .symptoms-name, .room-no {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+/* .flex-allotment-info  .referred-doctor-name, .referred-symptoms-name, .referred-room-no{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px; 
+} */
 .flex-personal-details .fname, .mname, .lname, .dob, .age, .gender, .bloodgroup, .status , .occupation, .citizen, .email, .contactno{
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
 }
 
-.name{
-    width: 200px;
-    height: 30px;
-}
-.reg-dob{
-    width: 200px;
-    height: 30px;
-}
-.reg-age{
-    width: 200px;
-    height: 30px;
-}
-.reg-gender{
-    width: 200px;
-    height: 30px;
-}
-
-.reg-bloodgroup{
-    width: 200px;
-    height: 30px;
-}
-.reg-status{
-    width: 200px;
-    height: 30px;
-}
-.reg-occupation{
-    width: 200px;
-    height: 30px;
-}
-.reg-phno{
-    width: 200px;
-    height: 30px;
-}
-.reg-email{
-    width: 200px;
-    height: 30px;
-}
-.reg-citizen{
-    width: 200px;
-    height: 30px;
-}
-.reg-address{
-    width: 200px;
-    height: 30px;
-}
-.reg-city{
-    width: 200px;
-    height: 30px;
-}
-.reg-state{
-    width: 200px;
-    height: 30px;
-}
-.reg-pincode{
+.name, .reg-dob, .reg-age, .reg-gender, .reg-bloodgroup, .reg-status ,.reg-occupation, .reg-phno, .reg-email,
+.reg-citizen, .reg-address, .reg-city, .reg-state, .reg-pincode, .referred-doctor-name, .referred-symptoms-name, .referred-room-no{
     width: 200px;
     height: 30px;
 }
@@ -299,6 +279,9 @@
     margin-left: -100px;
 }
 .flex-personal-details input ,select{
+    margin-left: -100px;
+}
+.flex-allotment-info input ,select{
     margin-left: -100px;
 }
 
@@ -355,7 +338,7 @@
 .clear-button{
     background-color: red;
     color: white;
-    margin-top: 20px;
+    margin-top: 2px;
     width: 150px;
     height: 40px;
     border-radius: 5px;
@@ -376,7 +359,7 @@ select:focus {
 .submit-button{
     background-color: green;
     margin-left: 60px;
-    margin-top: 20px;
+    margin-top: 2px;
     height: 40px;
     border-radius: 5px;
     width: 150px;

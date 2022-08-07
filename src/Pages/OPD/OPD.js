@@ -60,50 +60,56 @@ function OPD() {
 
             {/* Add Labels ad its fields of srno, medicine name, noofdays, morning, afternoon, evening, total, and medicine type */}
             <div className='opd-data-entry'>
+            <form>
             <div className='opd-entry-container'>
             <h4>Enter Drug Dose :</h4>
+            <div className='flex-entrytbl-addbtn'>
             <table className='opd-entrydata-table'>
             <tr>
             
            
             <td>
             <div className='labels-medicine-name'>
-            <input type="text" placeholder="Enter Medicine Name" className='input-opd'/>
+            <input type="text" placeholder="Medicine Name" className='input-opd' required/>
             </div>
             </td>
             <td>
             <div className='labels-noofdays'>
-            <input type="text" placeholder="Enter No.of Days" className='input-opd'/>
+            <input type="text" placeholder="No.of Days" className='input-opd' required/>
             </div>
             </td>
             <td>
             <div className='labels-morning'>
-            <input type="text" placeholder="Enter Morning" className='input-opd'/>
+            <input type="text" placeholder="Morning" className='input-opd' required/>
             </div>
             </td>
             <td>
             <div className='labels-afternoon'>
-            <input type="text" placeholder="Enter Afternoon" className='input-opd'/>
+            <input type="text" placeholder="Afternoon" className='input-opd' required/>
             </div>
             </td>
             <td>
             <div className='labels-evening'>
-            <input type="text" placeholder="Enter Evening" className='input-opd'/>
+            <input type="text" placeholder="Evening" className='input-opd' required/>
             </div>
             </td>
             <td>
             <div className='labels-total'>
-            <input type="text" placeholder="Enter Total" className='input-opd'/>
+            <input type="text" placeholder="Total" className='input-opd' required/>
             </div>
             </td>
             <td>
             <div className='labels-medicine'>
-            <input type="text" placeholder="Enter Medicine Type" className='input-opd'/>
+            <input type="text" placeholder="Medi-Type" className='input-opd' required/>
             </div>
             </td>
             </tr>
             </table>
+
+            <button className='add-button'>ADD</button>
             </div>
+            </div>
+            </form>
             </div>
             
                     <div className='opd-list'>
