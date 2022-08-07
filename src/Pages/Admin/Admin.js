@@ -52,7 +52,7 @@ import "../../CSS/Sidebar.css";
 function Admin() {
   return (
   <>
-    <Navbar />
+    {/* <Navbar /> */}
 
        <div className="container">
             <div className="wrap">

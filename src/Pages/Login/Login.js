@@ -9,7 +9,7 @@ import Navbar from '../../Components/Navbar/Navbar'
 function Login() {
   return (
    <>
-    <Navbar />
+    {/* <Navbar /> */}
 
    <div className='login-card'>
     <div className='login-card-header'>

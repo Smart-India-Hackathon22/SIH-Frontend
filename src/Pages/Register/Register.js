@@ -15,7 +15,7 @@ function Register() {
   const [bg, changeBGColor] = React.useState(1);
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
 
       <div className="flex-register">
         {/* side menu bar section  */}

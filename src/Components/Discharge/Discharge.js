@@ -10,7 +10,7 @@ import "./Discharge.css"
 function Discharge() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="container">
     <div className="wrap">
     { items.map((item, index) => <SidebarItem key={index} item={item} />) }

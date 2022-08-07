@@ -9,7 +9,7 @@ import "./IPD.css"
 function IPD() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
 
     <div className="container">
          <div className="wrap">

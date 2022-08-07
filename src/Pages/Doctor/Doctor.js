@@ -9,7 +9,7 @@ import "../../CSS/Sidebar.css";
 function Doctor() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
 
     <div className='flex-doctor-details'>
    {/* <Header /> */}
