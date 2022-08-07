@@ -8,7 +8,7 @@ import Navbar from '../Components/Navbar/Navbar'
 function Contactus() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
 
 
     {/* <div className='text'>Contactus</div> */}

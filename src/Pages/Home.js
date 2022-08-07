@@ -4,7 +4,7 @@ import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
 import Prototype from './Prototype';
 import Navbar from '../Components/Navbar/Navbar';
-
+import plus from "../Assets/Images/plus.png"
 import {Link} from 'react-router-dom';
 
 
@@ -18,9 +18,15 @@ function Home() {
   return (
     <>
 
+    {/* <Navbar className="navbar" /> */}
     <div className='background-img'>
-    <Navbar />
+     </div>
     <div className='login-card'>
+
+<div className='login-card-image'>
+  <img src={plus} alt='PLUS'/>
+</div>
+    <div className='login-card-body'>
     <div className='login-card-header'>
     <center>
     <h1>Login Page</h1>
@@ -51,9 +57,8 @@ function Home() {
        <Link to ="/forgetpassword" >Forget Username or Password ? </Link>      
        </center>
        </form>
-       
+       </div>
        </div>    
-     </div>
     </>
     )
 }

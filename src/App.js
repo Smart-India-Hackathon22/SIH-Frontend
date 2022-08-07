@@ -28,7 +28,7 @@ function App() {
     <>
      
       <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <Header />   */}
       {/* <Sidebar /> */}
      

@@ -10,7 +10,7 @@ function OPD() {
 
     // OPD user dashboard   
     <>
-    <Navbar />
+    {/* <Navbar /> */}
 
     <div className="container">
          <div className="wrap">

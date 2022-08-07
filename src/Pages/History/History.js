@@ -11,7 +11,7 @@ import "../../CSS/Sidebar.css";
 function History() {
   return (
    <>
-    <Navbar />
+    {/* <Navbar /> */}
 
     <Header />
 
