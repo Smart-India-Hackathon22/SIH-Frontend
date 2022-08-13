@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../CSS/Home.css'
+import axios from "axios"
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
 import Prototype from './Prototype';
@@ -34,23 +35,33 @@ function Home() {
        </div>
 
         {/* <div className='login-card-body'> */}
-        <form>
+        <form action="/verify" method='post' >
         <div className='form-group'>
-        <input type='text' className='form-control' placeholder='Username' required/>
-        <input type='password' className='form-control' placeholder='Passowrd' required/>
-        <select  className='form-control' required>
+        <input type='text' 
+          name="userName" 
+          className='form-control' 
+          placeholder='Username'
+          required/>
+        <input type='password' 
+          name='pass' 
+          className='form-control' 
+          placeholder='Passowrd'
+          required/>
+        <select  className='form-control' 
+          name="selection"
+          required>
           <option value='Select'>Select Role</option>
           <option value='Admin'>Admin</option>
-          <option value='User'>Receptionist</option>
-          <option value='User'>Nurse</option>
-          <option value='User'>OPD User</option>
-          <option value='User'>IPD User</option>
+          <option value='Doctor'>Doctor</option>
+          <option value='Receptionist'>Receptionist</option>
+          <option value='OPD User'>OPD User</option>
+          <option value='IPD User'>IPD User</option>
 
         </select>
 
        </div> 
        <center>
-       <button className='login-btn'>LOGIN</button>
+       <button className='login-btn' type='submit'>LOGIN</button>
        <div className='register-link'>
        <h5 className='user-heading'>New User ? </h5> <Link to="/register"> Sign-up </Link>  
        </div>

@@ -27,7 +27,7 @@ function Register() {
     </div>
             
               <section className="register">
-             <form>
+              <form action="/registration" method="post">
                 <div className="flex-heading-btn">
                   <h1 className="registration-heading">
                     {" "}
@@ -52,17 +52,18 @@ function Register() {
                 <div className="register-body">
                   <label className="label">Registration No.</label>
                   <input
-                    type="text"
+                    type="number"
                     className="reg-no"
                     placeholder="Reg No.*"
+                    name = "regNo"
                     required
                   />
 
                   <label className="label">Registration Date.</label>
-                  <input type="date" className="reg-date" required />
+                  <input type="date" className="reg-date"name="date" required />
 
                   <label className="label">Patient Type.</label>
-                  <select className="reg-patient-type" required>
+                  <select className="reg-patient-type" name="patientType" required>
                                   <option>Select Patient type</option>
                                   <option>NEW </option>
                                   <option>OLD</option>
@@ -83,6 +84,7 @@ function Register() {
                                   type="text"
                                   className="name"
                                   placeholder="First Name*"
+                                  name = "fname"
                                   required
                                 />
                               </div>
@@ -92,6 +94,7 @@ function Register() {
                                   type="text"
                                   className="name"
                                   placeholder="Middle Name*"
+                                  name = "mname"
                                   required
                                 />
                               </div>
@@ -101,6 +104,7 @@ function Register() {
                                   type="text"
                                   className="name"
                                   placeholder="Last Name*"
+                                  name = "lname"
                                   required
                                 />
                               </div>
@@ -109,6 +113,7 @@ function Register() {
                                 <input
                                   type="date"
                                   className="reg-dob"
+                                  name = "dob"
                                   required
                                 />
                               </div>
@@ -117,71 +122,74 @@ function Register() {
                                 <input
                                   type="number"
                                   className="reg-age"
+                                  name = "age"
                                   placeholder="Age *"
                                   required
                                 />
                               </div>
                               <div className="gender">
                                 <label className="label">Gender</label>
-                                <select className="reg-gender" required>
-                                  <option>Gender</option>
-                                  <option>Male</option>
-                                  <option>Female</option>
-                                  <option>Other</option>
+                                <select className="reg-gender" name="gender" required>
+                                  <option value='Gender'>Gender</option>
+                                  <option value='Male'>Male</option>
+                                  <option value='Female'>Female</option>
+                                  <option value='Other'>Other</option>
                                 </select>
                               </div>
                               <div className="bloodgroup">
                                 <label className="label">Blood Group</label>
-                                <select className="reg-bloodgroup">
+                                <select className="reg-bloodgroup" name = "bloodgroup">
                                   <option>Blood-Group +</option>
-                                  <option>A+</option>
-                                  <option>A-</option>
-                                  <option>B+</option>
-                                  <option>B-</option>
-                                  <option>AB+</option>
-                                  <option>AB-</option>
-                                  <option>O+</option>
-                                  <option>O-</option>
+                                  <option value='A+'>A+</option>
+                                  <option value='A-' >A-</option>
+                                  <option value='B+'>B+</option>
+                                  <option value='B-'>B-</option>
+                                  <option value='AB+'>AB+</option>
+                                  <option value='AB-'>AB-</option>
+                                  <option value='O+'>O+</option>
+                                  <option value='O-'>O-</option>
                                 </select>
                               </div>
                               <div className="status">
                                 <label className="label">Marrital Status</label>
-                                <select className="reg-status">
+                                <select className="reg-status" name = "status">
                                   <option>Marrital Status</option>
                                   <option>Married</option>
                                   <option>Unmarried</option>
                                 </select>
                               </div>
-                              <div className="occupation">
+                              {/* <div className="occupation">
                                 <label className="label">Occupation</label>
-                                <select  className="reg-occupation">
+                                <select  className="reg-occupation"  name="occupation" required>
                                   <option>Select Occupation</option>
                                   <option>Service</option>
                                   <option>Business</option>
                                 </select>
-                              </div>
+                              </div> */}
                               <div className="citizen">
-                                <label className="label">Nationality</label>
-                                <select className="reg-citizen" required>
+                                <label className="label" >Nationality</label>
+                                <select className="reg-citizen" name = "nationality" required>
                                   <option>Select Nationality</option>
                                   <option>Indian</option>
                                   <option>Foreigner</option>
                                 </select>
                               </div>
-                              <div className="email">
+                              <div className="email" >
                                 <label className="label">Email Id</label>
                                 <input
                                   type="email"
                                   className="reg-email"
-                                  placeholder="email@gmail.com *"
+                                  placeholder="email@gmail.com"
+                                  name = "email"
                                 />
                               </div>
                               <div className="contactno">
                                 <label className="label">Phone No.</label>
                                 <input
-                                  type="text"
+                                  type="number" 
                                   className="reg-phno"
                                   placeholder="+91 1234567089  *"
+                                  name = "phone"
                                   required
                                 />
                               </div>
@@ -204,7 +212,9 @@ function Register() {
                         <input
                           type="text"
                           className="reg-address"
-                          placeholder="B-No,Society,nearby"
+                          placeholder="B-No,Society,nearby *"
+                          name = "street"
+                          required
                         />
                       </div>
                       <div className="city">
@@ -212,7 +222,9 @@ function Register() {
                         <input
                           type="text"
                           className="reg-city"
-                          placeholder="City name"
+                          placeholder="City name *"
+                          name = "city"
+                          required
                         />
                       </div>
                       <div className="state">
@@ -220,7 +232,9 @@ function Register() {
                         <input
                           type="text"
                           className="reg-state"
-                          placeholder="State"
+                          placeholder="State *"
+                          name = "state"
+                          required
                         />
                       </div>
                       <div className="pincode">
@@ -229,6 +243,7 @@ function Register() {
                           type="text"
                           className="reg-pincode"
                           placeholder="6-digit code"
+                          name = "pincode"
                         />
                       </div>
                       <div className="country">
@@ -236,7 +251,9 @@ function Register() {
                         <input
                           type="text"
                           className="reg-country"
-                          placeholder="Country"
+                          placeholder="Country *"
+                          name = "country"
+                          required
                         />
                       </div>
                       {/* <div className="landline">
@@ -266,6 +283,7 @@ function Register() {
                           type="text"
                           className="reg-payer-name"
                           placeholder="payer-name*"
+                          name = "payerName"
                           required
                         />
                       </div>
@@ -275,15 +293,17 @@ function Register() {
                           type="text"
                           className="reg-payer-relation"
                           placeholder="Relation*"
+                          name = "payerRelation"
                           required
                         />
                       </div>
                       <div className="payer-amount">
                         <label className="label">Amount</label>
                         <input
-                          type="text"
+                          type="number"
                           className="reg-payer-amount"
                           placeholder="Amount Paid*"
+                          name = "amount"
                           required
                         />
                       </div>
@@ -303,23 +323,50 @@ function Register() {
                           type="text"
                           className="referred-doctor-name"
                           placeholder="Doctor-name *"
+                          name = "docName"
                           required
                         />
                       </div>
                       <div className="symptoms-name">
-                        <label className="label">Symptoms</label>
+                        <label className="label">Symptoms1</label>
                         <input
                           type="text"
                           className="referred-symptoms-name"
-                          placeholder="Symptoms"
+                          placeholder="Symptoms1*"
+                          name = "symptoms1"
+                          required
                         />
+                        <label className="label">Symptoms2</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name"
+                          placeholder="Symptoms2"
+                          name = "symptoms2"
+                        />
+                        <label className="label">Symptoms3</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name"
+                          placeholder="Symptoms3"
+                          name = "symptoms3"
+                        />
+                        <label className="label">Symptoms4</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name"
+                          placeholder="Symptoms4"
+                          name = "symptoms4"
+                        />
+
                       </div>
                       <div className="room-no">
                         <label className="label">Room No.</label>
                         <input
                           type="number"
                           className="referred-room-no"
-                          placeholder="Room-No."
+                          placeholder="Room-No. *"
+                          name = "roomNo"
+                          required
                         />
                       </div>
                   </div>
@@ -327,8 +374,8 @@ function Register() {
 
                   {/* Clear Form Button and Submit Form button */}
                   <center>
-                    <button className="clear-button">CLEAR</button>
-                    <button className="submit-button">SUBMIT</button>
+                  <button className="clear-button" type="reset">CLEAR</button>
+                    <button className="submit-button" type="submit">SUBMIT</button>
                   </center>
                 </div>
                 </form>
