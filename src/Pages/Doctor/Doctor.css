@@ -74,11 +74,11 @@
     padding: 10px;
     text-align: center;
 }
-tr{
+.doctor-table tr{
     background-color: white;
 }
 
-tr:hover{
+.doctor-table tr:hover{
     background-color: wheat;
     border-radius: 5px;
     padding: 10px;
