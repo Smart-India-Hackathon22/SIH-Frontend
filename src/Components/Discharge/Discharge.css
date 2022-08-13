@@ -1,4 +1,5 @@
 .discharge-uhid{
+    
     margin-left: 100px;
     display: flex;
     justify-content: space-evenly;
@@ -13,4 +14,173 @@
     width: 150px;
     height: 40px;
     margin-left: 20px;
+}
+
+.discharge{
+    color: black;
+    display: block;
+    margin: 0%;
+    width: 1500px;
+    height: 100%;
+}
+.flex-dischargepage{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.discharge-hide{
+    display: none;
+}
+
+/* .discharge-body{
+    width: 95%;
+    height: 700px;
+    background-color: rgb(218, 209, 209);
+    margin-top: 30px;
+} */
+
+.discharge-body{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(238, 238, 238);
+
+}
+.discharge-body-heading{
+    margin-top: 10px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.discharge-patientname, .discharge-patientdob, .discharge-patientgender, .discharge-patientage, .discharge-patientaddress, .discharge-patientbloodgrp, .discharge-patientemail, .discharge-patientnumber{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 1px;
+}
+.discharge-hospitalname, .discharge-hospitaladdress, .discharge-hospitalemail, .discharge-hospitalnumber{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 1px;
+}
+
+.discharge-patient-details{
+    width: 50%;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+.discharge-hospital-details{
+    width: 50%;
+    border: 3px solid black;
+}
+
+.flex-patient-hospital-details{
+    margin-top: 5px;
+    display: flex;
+}
+.flex-tbl{
+    display: flex;
+    justify-content: space-between;
+}
+.diagnosis-tbl{
+    width: 48%;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.column-heading{
+    background-color: rgb(190, 190, 190);
+    padding-left: 15px;
+    font-weight: 900;
+}
+.diagnosis-tbl td{
+    border: 1px solid grey;
+
+}
+
+.diagnosis-input{
+    width: 100%;
+    height: 35px;
+}
+.medicine-details-tbl{
+    width: 97%;
+    margin-left: 20px;
+}
+.medicine-details-tbl th{
+    background-color: rgb(190, 190, 190);
+    font-weight: 900;
+    height: 35px;
+}
+
+
+.discharge-appointment-details, .discharge-information-provided-details{
+    margin-top: 20px;
+}
+
+.discharge-endofdocument-heading{
+    margin-top: 10px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    height: 60px;
+    padding-top: 10px;
+}
+
+.next-button {
+    background-color: green;
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: rgb(6, 158, 6);
+}
+
+
+.prev-button{
+    background-color: rgb(0, 19, 128);
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.prev-button:hover{
+    background-color: rgb(8, 16, 243);
+}
+
+.print-button{
+    background-color: rgb(136, 7, 7);
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.print-button:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.button-below{
+    margin-top: 160px;
 }

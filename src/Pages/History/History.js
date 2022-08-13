@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react';
+// import { useReactToPrint } from 'react-to-print';
+
 import Header from '../../Components/Header/Header';
 import "./History.css";
 import Navbar from '../../Components/Navbar/Navbar'
@@ -13,15 +15,23 @@ function History() {
    <>
     {/* <Navbar /> */}
 
-    <Header />
-
+    {/* <Header />
+     */}
+     <div className="container">
+            <div className="wrap">
+    { items.map((item, index) => <SidebarItem key={index} item={item} />) }
+    </div>
     <div className='history'>
             <div className='history-card'>
                 <div className='history-card-header'>
                     <div className='uid'>   
                 <h4>UHID : </h4>
-                <input type="text" placeholder="Enter UHID" className='uhid'/>
+                <input type="number" placeholder="Enter UHID" className='uhid'/>
                 </div> 
+
+                {/* <div className='printbtn'>
+                    <button className='print-button'>PRINT</button>
+                </div> */}
                     <h1>History</h1>
                     <div className='underline'> </div>                        
 
@@ -120,6 +130,7 @@ function History() {
                     </div>
             </div>
             </div>
+    </div>
     </div>
    </>
   )

@@ -20,6 +20,7 @@ import History from './Pages/History/History'
 import Doctor from './Pages/Doctor/Doctor'
 import OPD from './Pages/OPD/OPD'
 import IPD from './Pages/IPD/IPD'
+import Page2 from './Components/Discharge/Page2'
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Route  path="/opduser" element={<OPD />} />
           <Route  path="/ipduser" element={<IPD />} />
           <Route  path="/dischargesummary" element={<Discharge />} />
+          <Route  path="/page2" element={<Page2 />} />
           <Route  path="/doctordetail" element={<Doctor />} />
           <Route  path="/login" element={<Login />} />
           <Route  path="/prototype" element={<Prototype />} />
