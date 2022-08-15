@@ -4,16 +4,19 @@ import "../../src/CSS/Contactus.css";
 import Header from '../Components/Header/Header'
 import Navbar from '../Components/Navbar/Navbar'
 
+import items from "../Components/Sidebar/Sidebar.json"
+import SidebarItem from "../Components/Sidebar/SidebarItem"
+import "../CSS/Sidebar.css";
 
 function Contactus() {
   return (
     <>
-    {/* <Navbar /> */}
-
-
-    {/* <div className='text'>Contactus</div> */}
-    <Header />
-                        <section className="career-statics">
+   
+   <div className="container">
+            <div className="wrap">
+    { items.map((item, index) => <SidebarItem key={index} item={item} />) }
+    </div>
+                        <div className="career-statics">
 
                             <div className="statistic1">
                             
@@ -76,7 +79,8 @@ function Contactus() {
                              </div>
 
                    
-                        </section>
+                        </div>
+                        </div>
     </>
   )
 }

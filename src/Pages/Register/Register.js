@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useRef} from "react";
+import { useReactToPrint } from "react-to-print";
 import { Button } from "@mui/material";
 import introimg from "../../../src/Assets/Images/intro.png";
 import Header from "../../Components/Header/Header";
@@ -12,27 +13,32 @@ import "../../CSS/Sidebar.css";
 
 import "../../CSS/Register.css";
 function Register() {
+
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
   const [bg, changeBGColor] = React.useState(1);
   return (
     <>
     {/* <Navbar /> */}
 
-      <div className="flex-register">
+      <div className="flex-register" >
         {/* side menu bar section  */}
-        <section>
+      
           <>
             <div className="container">
             <div className="wrap">
     { items.map((item, index) => <SidebarItem key={index} item={item} />) }
     </div>
             
-              <section className="register">
+              <div className="register" ref={componentRef}>
               <form action="/registration" method="post">
                 <div className="flex-heading-btn">
-                  <h1 className="registration-heading">
+                  <h3 className="registration-heading">
                     {" "}
                     Patient Registration
-                  </h1>
+                  </h3>
                   <div className="flex-btn">
                     <Link to="/Login" className="link">
                       {" "}
@@ -40,7 +46,7 @@ function Register() {
                     </Link>
                     <Link to="/Login" className="link">
                       {" "}
-                      <Button className="btn-link">Print</Button>
+                      <Button className="btn-link" onClick={handlePrint}>Print</Button>
                     </Link>
                     <Link to="/Login" className="link">
                       {" "}
@@ -71,10 +77,10 @@ function Register() {
                                 </select>
 
                   <div className="personal-details">
-                  <h1 className="registration-heading">
+                  <h3 className="registration-heading">
                     {" "}
                     Personal Details
-                  </h1>
+                  </h3>
                     {/* underline with grey color  */}
                     <div className="underline"></div>
                       <div className="flex-personal-details">
@@ -201,10 +207,10 @@ function Register() {
                   </div>
 
                   <div className="address-details">
-                  <h1 className="registration-heading">
+                  <h3 className="registration-heading">
                     {" "}
                     Address Details
-                  </h1>
+                  </h3>
                     <div className="underline"></div>
                     <div className="flex-address-details-1">
                       <div className="address">
@@ -271,10 +277,10 @@ function Register() {
                   </div>
 
                   <div className="payer-information-details">
-                  <h1 className="registration-heading">
+                  <h3 className="registration-heading">
                     {" "}
                     Payment Information
-                  </h1>
+                  </h3>
                     <div className="underline"></div>
                     <div className="flex-payer-info">
                       <div className="payer-name">
@@ -311,10 +317,10 @@ function Register() {
                   </div>
 
                   <div className="allotment-details">
-                  <h1 className="registration-heading">
+                  <h3 className="registration-heading">
                     {" "}
                     Allotment Information
-                  </h1>
+                  </h3>
                     <div className="underline"></div>
                     <div className="flex-allotment-info">
                       <div className="doctor-name">
@@ -327,38 +333,6 @@ function Register() {
                           required
                         />
                       </div>
-                      <div className="symptoms-name">
-                        <label className="label">Symptoms1</label>
-                        <input
-                          type="text"
-                          className="referred-symptoms-name"
-                          placeholder="Symptoms1*"
-                          name = "symptoms1"
-                          required
-                        />
-                        <label className="label">Symptoms2</label>
-                        <input
-                          type="text"
-                          className="referred-symptoms-name"
-                          placeholder="Symptoms2"
-                          name = "symptoms2"
-                        />
-                        <label className="label">Symptoms3</label>
-                        <input
-                          type="text"
-                          className="referred-symptoms-name"
-                          placeholder="Symptoms3"
-                          name = "symptoms3"
-                        />
-                        <label className="label">Symptoms4</label>
-                        <input
-                          type="text"
-                          className="referred-symptoms-name"
-                          placeholder="Symptoms4"
-                          name = "symptoms4"
-                        />
-
-                      </div>
                       <div className="room-no">
                         <label className="label">Room No.</label>
                         <input
@@ -369,6 +343,47 @@ function Register() {
                           required
                         />
                       </div>
+                      <div className="symptoms-name-1">
+                        <label className="label">Symptoms1</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name-1"
+                          placeholder="Symptoms1*"
+                          name = "symptoms1"
+                          required
+                        />
+                        </div>
+                        <div className="symptoms-name-2">
+                        <label className="label">Symptoms2</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name-2"
+                          placeholder="Symptoms2"
+                          name = "symptoms2"
+                        />
+                         </div>
+
+                        <div className="symptoms-name-3">
+                        <label className="label">Symptoms3</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name-3"
+                          placeholder="Symptoms3"
+                          name = "symptoms3"
+                        />
+                          </div>
+                          <div className="symptoms-name-4">
+                        <label className="label">Symptoms4</label>
+                        <input
+                          type="text"
+                          className="referred-symptoms-name-4"
+                          placeholder="Symptoms4"
+                          name = "symptoms4"
+                        />
+                        </div>
+
+                     
+                     
                   </div>
                   </div>
 
@@ -379,10 +394,10 @@ function Register() {
                   </center>
                 </div>
                 </form>
-              </section>
+              </div>
             </div>
           </>
-        </section>
+        
       </div>
     </>
   );

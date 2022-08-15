@@ -1,6 +1,12 @@
 import React from 'react'
 import Typical from "react-typical";
 import "../../src/CSS/Aboutus.css";
+import Header from '../Components/Header/Header';
+
+
+import items from "../Components/Sidebar/Sidebar.json"
+import SidebarItem from "../Components/Sidebar/SidebarItem"
+import "../CSS/Sidebar.css";
 
 function Aboutus() {
   return (

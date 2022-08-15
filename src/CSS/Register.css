@@ -11,8 +11,8 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
+    /* list-style: none; */
+    /* text-decoration: none; */
     box-sizing: border-box;
 
 }
@@ -20,17 +20,16 @@
 
 .container{
     width: 100%;
-    height:100% ;
+    height:91.45vh ;
     display: flex;
     flex-direction: space-around;       
     /* background-color: lightblue; */
 
 }
 .wrap{
-   
     width: 300px;
+    line-height: 70px;
     height: 100%;
-    /* background-color: rgb(50, 51, 52); */
 
 }
 
@@ -140,6 +139,7 @@
     margin-right: 20px;
     /* margin-top: 20px; */
     padding-bottom: 20px;
+    height: 85vh;
 
 }
 .reg-patient-type{
@@ -182,7 +182,7 @@
     /* font-family: 'Courier New', Courier, monospace; */
     font-size: 18px;
     /* color: black; */
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .select-title{
@@ -204,7 +204,7 @@
     /* font-family: 'Courier New', Courier, monospace; */
     font-size: 18px;
     /* color: black; */
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .flex-allotment-info{
@@ -215,7 +215,7 @@
     margin-right: 20px;
     margin-top: 20px;
 }
-.flex-allotment-info .doctor-name, .symptoms-name, .room-no {
+.flex-allotment-info .doctor-name, .symptoms-name-1, .symptoms-name-2, .symptoms-name-3, .symptoms-name-4, .room-no {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
@@ -233,7 +233,8 @@
 }
 
 .name, .reg-dob, .reg-age, .reg-gender, .reg-bloodgroup, .reg-status ,.reg-occupation, .reg-phno, .reg-email,
-.reg-citizen, .reg-address, .reg-city, .reg-state, .reg-pincode, .referred-doctor-name, .referred-symptoms-name, .referred-room-no{
+.reg-citizen, .reg-address, .reg-city, .reg-state, .reg-pincode, .referred-doctor-name, .referred-symptoms-name,
+ .referred-room-no, .referred-symptoms-name-1, .referred-symptoms-name-2, .referred-symptoms-name-3, .referred-symptoms-name-4{
     width: 200px;
     height: 30px;
 }
@@ -241,7 +242,7 @@
     /* font-family: 'Courier New', Courier, monospace; */
     font-size: 18px;
     /* color: black; */
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .flex-address-details-1{
@@ -308,7 +309,7 @@
 .payer-information-details{
     /* font-family: 'Courier New', Courier, monospace; */
    
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
 .flex-payer-info{

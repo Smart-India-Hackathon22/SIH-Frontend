@@ -90,7 +90,9 @@ function Page2() {
             <Link to="/dischargesummary">
           <button className="prev-button">PREV</button>
           </Link>
-          <button className="print-button">PRINT</button>
+          <Link to="/dummyprint">
+          <button className="print-button">SAVE</button>
+          </Link>
 </center>
 
 </form>

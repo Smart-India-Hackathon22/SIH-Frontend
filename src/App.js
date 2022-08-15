@@ -21,6 +21,7 @@ import Doctor from './Pages/Doctor/Doctor'
 import OPD from './Pages/OPD/OPD'
 import IPD from './Pages/IPD/IPD'
 import Page2 from './Components/Discharge/Page2'
+import Dummyprint from './Pages/Dummyprint'
 
 
 
@@ -46,6 +47,10 @@ function App() {
           <Route  path="/ipduser" element={<IPD />} />
           <Route  path="/dischargesummary" element={<Discharge />} />
           <Route  path="/page2" element={<Page2 />} />
+
+          
+          <Route  path="/dummyprint" element={<Dummyprint />} />
+
           <Route  path="/doctordetail" element={<Doctor />} />
           <Route  path="/login" element={<Login />} />
           <Route  path="/prototype" element={<Prototype />} />
