@@ -10,8 +10,10 @@ function Doctor() {
   return (
     <>
     {/* <Navbar /> */}
-
-    <div className='flex-doctor-details'>
+    <div className="container">
+    <div className="wrap">
+    { items.map((item, index) => <SidebarItem key={index} item={item} />) }
+    </div>
    {/* <Header /> */}
     <div className='detail'>
    
@@ -34,7 +36,6 @@ function Doctor() {
                             <th>Doctor Name</th>
                             <th>Specilized Field</th>
                             <th>Experience</th>
-                            <th>Cabin No.</th>
                             <th>Available Doctor</th>
                         </tr>
                         <tr>
@@ -42,7 +43,6 @@ function Doctor() {
                             <td>Dr.Rajesh</td>
                             <td>Cardiology</td>
                             <td>5 years</td>
-                            <td>C-1</td>
                             <td>Available</td>
                         </tr>
                         <tr>
@@ -50,7 +50,6 @@ function Doctor() {
                             <td>Dr.Mahesh</td>
                             <td>Heart Specialist</td>
                             <td>3 years</td>
-                            <td>C-2</td>
                             <td>Available</td>
                         </tr>
                         <tr>
@@ -58,7 +57,6 @@ function Doctor() {
                             <td>Dr.Suresh</td>
                             <td>OPD User</td>
                             <td>2 years</td>
-                            <td>C-3</td>
                             <td>Available</td>
                         </tr>
                         <tr>
@@ -66,7 +64,6 @@ function Doctor() {
                             <td>Dr.Nima Ben</td>
                             <td>IPD User</td>
                             <td>3 year</td>
-                            <td>C-4</td>
                             <td>Not Available</td>
 
                         </tr>

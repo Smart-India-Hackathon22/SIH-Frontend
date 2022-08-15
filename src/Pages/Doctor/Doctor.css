@@ -12,7 +12,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .underline2{
-    width: 100%;
+    width: 98%;
     height: 3px;
     background-color: #e0e0e0;
     margin-top: 10px;
@@ -53,7 +53,7 @@
 }
 
 .doctor-table{
-    width: 100%;
+    width: 98%;
     height: 100%;
     margin-top: 100px;
     border-collapse: collapse;
