@@ -60,21 +60,22 @@ function Admin() {
     </div>
     
   <section className="register">
-  
+
+  <form action="/addrole" method="post">
 
   <div className="register-body">
     <label className="label">Role Type </label>
-    <select className="select">
-      <option value="admin">Admin</option>
-      <option value="doctor">Doctor</option>
-      <option value="patient">Patient</option>
-      <option value="patient">OPD User</option>
-      <option value="patient">IPD User</option>
+    <select className="select" name="roletype" required>
+      <option value="Admin">Admin</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Receptionist">Receptionist</option>
+      <option value="OPD User">OPD User</option>
+      <option value="IPD User">IPD User</option>
     </select>
 
 
     <label className="label">Registration Date.</label>
-    <input type="date" className="reg-date" required />
+    <input type="date" className="reg-date" name="rDate" required />
 
     <div className="personal-details">
     <h1 className="registration-heading">
@@ -90,6 +91,7 @@ function Admin() {
                     type="text"
                     className="name"
                     placeholder="First Name*"
+                    name="fname"
                     required
                   />
                 </div>
@@ -99,6 +101,7 @@ function Admin() {
                     type="text"
                     className="name"
                     placeholder="Middle Name*"
+                    name="mname"
                     required
                   />
                 </div>
@@ -108,6 +111,7 @@ function Admin() {
                     type="text"
                     className="name"
                     placeholder="Last Name*"
+                    name="lname"
                     required
                   />
                 </div>
@@ -116,6 +120,7 @@ function Admin() {
                   <input
                     type="date"
                     className="reg-dob"
+                    name="dob"
                     required
                   />
                 </div>
@@ -125,12 +130,13 @@ function Admin() {
                     type="number"
                     className="reg-age"
                     placeholder="Age"
+                    name="age"
                     required
                   />
                 </div>
                 <div className="gender">
                   <label className="label">Gender</label>
-                  <select className="reg-gender" required>
+                  <select className="reg-gender" name="gender" required>
                     <option>Gender</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -139,7 +145,7 @@ function Admin() {
                 </div>
                 <div className="bloodgroup">
                   <label className="label">Blood Group</label>
-                  <select className="reg-bloodgroup">
+                  <select className="reg-bloodgroup" name="bloodgroup">
                     <option>Blood-Group +</option>
                     <option>A+</option>
                     <option>A-</option>
@@ -153,20 +159,20 @@ function Admin() {
                 </div>
                 <div className="status">
                   <label className="label">Marrital Status</label>
-                  <select className="reg-status">
+                  <select className="reg-status" name="status" required>
                     <option>Marrital Status</option>
                     <option>Married</option>
                     <option>Unmarried</option>
                   </select>
                 </div>
-                <div className="occupation">
+                {/* <div className="occupation">
                   <label className="label">Occupation</label>
                   <input type="text" className="reg-occupation" />
-                </div>
+                </div> */}
                 <div className="citizen">
-                  <label className="label">citizen</label>
-                  <select className="reg-citizen" required>
-                    <option>Citizen</option>
+                  <label className="label">Nationality</label>
+                  <select className="reg-citizen" name="nationality" required>
+                    <option>Nationality</option>
                     <option>Indian</option>
                     <option>Foreigner</option>
                   </select>
@@ -177,6 +183,7 @@ function Admin() {
                     type="email"
                     className="reg-email"
                     placeholder="email@gmail.com *"
+                    name="email"
                   />
                 </div>
                 <div className="contactno">
@@ -185,6 +192,7 @@ function Admin() {
                     type="text"
                     className="reg-phno"
                     placeholder="+91 1234567089  *"
+                    name="phone"
                     required
                   />
                 </div>
@@ -194,6 +202,7 @@ function Admin() {
             type="text"
             className="reg-landline"
             placeholder="Profession *"
+            name="profession"
           />
         </div>
         <div className="landline">
@@ -202,6 +211,8 @@ function Admin() {
             type="text"
             className="reg-landline"
             placeholder="No of years *"
+            name="experience"
+            required
           />
         </div>
           </div>
@@ -211,65 +222,6 @@ function Admin() {
           
     </div>
 
-      {/* <div className="address-details">
-      <h1 className="registration-heading">
-        {" "}
-        Address Details
-      </h1>
-        <div className="underline"></div>
-        <div className="flex-address-details-1">
-          <div className="address">
-            <label className="label"> Street </label>
-            <input
-              type="text"
-              className="reg-address"
-              placeholder="B-No,Society,nearby"
-            />
-          </div>
-          <div className="city">
-            <label className="label"> CityName</label>
-            <input
-              type="text"
-              className="reg-city"
-              placeholder="City name"
-            />
-          </div>
-          <div className="state">
-            <label className="label"> State</label>
-            <input
-              type="text"
-              className="reg-state"
-              placeholder="State"
-            />
-          </div>
-          <div className="pincode">
-            <label className="label"> Pincode</label>
-            <input
-              type="text"
-              className="reg-pincode"
-              placeholder="6-digit code"
-            />
-          </div>
-          <div className="country">
-            <label className="label"> Country</label>
-            <input
-              type="text"
-              className="reg-country"
-              placeholder="Country"
-            />
-          </div>
-          <div className="landline">
-            <label className="label"> Landline</label>
-            <input
-              type="text"
-              className="reg-landline"
-              placeholder="12 digit No"
-            />
-          </div>
-        
-        </div>
-        
-      </div> */}
 
     <div className="payer-information-details">
     <h1 className="registration-heading">
@@ -284,6 +236,7 @@ function Admin() {
             type="text"
             className="reg-payer-name"
             placeholder="Username*"
+            name="username"
             required
           />
         </div>
@@ -293,6 +246,7 @@ function Admin() {
             type="text"
             className="reg-payer-relation"
             placeholder="Password*"
+            name="pass"
             required
           />
         </div>
@@ -302,6 +256,7 @@ function Admin() {
             type="text"
             className="reg-payer-amount"
             placeholder="Confirm Password*"
+            name="cnfPass"
             required
           />
         </div>
@@ -311,9 +266,11 @@ function Admin() {
     {/* Clear Form Button and Submit Form button */}
     <center>
       <button className="clear-button">CLEAR</button>
-      <button className="submit-button">SUBMIT</button>
+      <button className="submit-button" type="submit">SUBMIT</button>
     </center>
   </div>
+
+  </form>
 </section>
 </div>
 </>
