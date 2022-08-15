@@ -62,9 +62,10 @@
     border-radius: 5px;
     padding: 10px;
     text-align: center;
+    border: 2px solid grey;
 }
 .doctor-table th{
-    background-color: #fff;
+    background-color: rgb(200, 195, 195);
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -74,6 +75,8 @@
     border-radius: 5px;
     padding: 10px;
     text-align: center;
+    border: 2px solid grey;
+
 }
 .doctor-table tr{
     background-color: white;
