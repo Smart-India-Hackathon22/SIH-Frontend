@@ -1,14 +1,23 @@
 .history-card{
-    width: 60%;
+    width: 150vh;
     height: 70vh;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #000;
+    border: 3px solid #cacaca;
+    /* box-shadow: 0px 0px 10px #000; */
     padding: 10px;
     margin-left: 150px;
     margin-top: 100px;
     margin-bottom: 10px;
-    background-color: rgb(216, 211, 210);
+    /* background-color: rgb(216, 211, 210); */
 }
+.history-card-header{
+    display: flex;
+}
+
+.history-card-body{
+    color: black;
+}
+
 .history-tbl{
     margin-left: 20px;
     width: 97%;
@@ -22,33 +31,57 @@
     margin-top: 20px;
 }
 
-.patientname, .patientdob, .patientgender, .patientage, .patientaddress, .patientbloodgrp, .patientemail, .patientnumber{
+.patientname, .patientdob, .patientgender, .patientage, .patientaddress, .patientbloodgrp, .patientemail, .patientnumber, .patientid{
     padding-left: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1px;
 }
 .patient-summary-haeding{
-    padding-top: 90px;
-}
-h4{
-    padding-top: 7px;
+    padding-top: 10px;
 }
 
+
 .uhid{
-    border: none;
-    width: 100px;
-    height: 20px;
+    border: 1px solid #cacaca;
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
     display: flex;
     margin-top: 5px;
     margin-left: 30px;
+    padding-left: 10px;
+    
 }
 .uid{
     display: flex;
     margin-bottom: 30px;
 }
+.uid h4{
+    font-size: 20px;
+    margin-top: 3px;
+}
 
 .container .history{
     color: black;
+    
+}
+.flex-historyheading-print{
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: -17px; */
+}
+.flex-historyheading-print button{
+    margin-top: -7px;
+}
 
+.fieldname-style{
+    color: rgb(137, 137, 137);
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dataname-style{
+    line-height: 30px;
+    color: rgb(23, 23, 23);
 }
