@@ -1,26 +1,90 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import "./Doctor.css";
 import Header from "../../Components/Header/Header";
-import Navbar from '../../Components/Navbar/Navbar'
+import Navbar from "../../Components/Navbar/Navbar";
 
-import items from "../../Components/Sidebar/Sidebar.json"
-import SidebarItem from "../../Components/Sidebar/SidebarItem"
+import items from "../../Components/Sidebar/Sidebar.json";
+import SidebarItem from "../../Components/Sidebar/SidebarItem";
 import "../../CSS/Sidebar.css";
 function Doctor() {
+  const [data, setData] = React.useState([]);
+  const [filterVal, setFilterVal] = React.useState("");
+  const [searchApiData, setsearchApiData] = React.useState([]);
+  useEffect(() => {
+    const fetchData = () => {
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((json) => {
+          setData(json)
+          setsearchApiData(json);
+        });
+    };
+    fetchData();
+  }, []);
+
+  const handleFilter = (e) => {
+    if (e.target.value == "") {
+      setData(searchApiData);
+    } else {
+      const filterResult = searchApiData.filter(
+        (item) =>
+          item.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+          item.email.toLowerCase().includes(e.target.value.toLowerCase()) ||
+          item.username.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      setData(filterResult);
+    }
+    setFilterVal(e.target.value);
+  };
   return (
     <>
-    {/* <Navbar /> */}
     <div className="container">
     <div className="wrap">
     { items.map((item, index) => <SidebarItem key={index} item={item} />) }
     </div>
-   {/* <Header /> */}
+      <div className="detail">
+        <h1 className="doctor-details-heading">DOCTOR DETAILS </h1>
+        <div className="underline2"></div>
+        <div className="doctor-details">
+          <div className="doctor-search">
+            <center>
+              <input
+                type="text"
+                placeholder="Search Doctor, Specialization, Available ......."
+                className="doctor-filter"
+                onInput={(e) => handleFilter(e)}
+                value={filterVal}
+              />
+              {/* <button className="search-doctor-btn">Search</button> */}
+            </center>
+          </div>
+          <table className="doctor-table">
+            <th>Name : </th>
+            <th>Username : </th>
+            <th>Email : </th>
+            {data.map((item) => {
+              return (
+                <tr>
+                  <td>{item.name}</td>
+                  <td>{item.username}</td>
+                  <td>{item.email}</td>
+                </tr>
+              );
+            })}
+          </table>
+        </div>
+      </div>
+      </div>
+
+      {/* <div className="container">
+    <div className="wrap">
+    { items.map((item, index) => <SidebarItem key={index} item={item} />) }
+    </div>
     <div className='detail'>
    
         <h1 className='doctor-details-heading'>DOCTOR DETAILS  </h1>
         <div className='underline2'></div>
         <div className='doctor-details'>
-        {/* filter to search the specilized doctor as per the field and also to filter as per the name of the doctor */}
         <div className='doctor-search'>
         <center>
             <input type='text' placeholder='Search Doctor, Specialization, Available .......' className='doctor-filter'/>
@@ -76,9 +140,9 @@ function Doctor() {
             </div>
             </div>
     </div>
-    </div>
+    </div> */}
     </>
-  )
+  );
 }
 
 export default Doctor;
