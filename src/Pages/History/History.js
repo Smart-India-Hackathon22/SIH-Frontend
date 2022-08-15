@@ -11,6 +11,7 @@ import axios from "axios"
 import items from "../../Components/Sidebar/Sidebar.json"
 import SidebarItem from "../../Components/Sidebar/SidebarItem"
 import "../../CSS/Sidebar.css";
+// import { post } from '../../../../SIH-Backend/routers/router';
 var FormData = require('form-data');
 function History() {
 
@@ -22,24 +23,28 @@ function History() {
 
     const [uhid, setuhid] = useState(0);
     const [historyData, setHistoryData] = useState();
-    async function submitHistory() {
-        const formdata = new FormData();
-        console.log(formdata);
-        formdata.append('id', `${uhid}`);
-        const res = await axios.post("/gethistory", formdata, {
-        headers: {
-          'Content-Type': 'formData'
-        }
-      })
-        console.log(res.data);
-        // if(data) setHistoryData(data.data);
+    async function submitHistory(event) {
+        event.preventDefault();
+        // const res = await axios.post("http://localhost:8000/gethistory", formdata)
+        const res = await fetch("http://localhost:8000/gethistory",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json;charset=UTF-8"
+            },
+            body:JSON.stringify({uhid})
+        })
+        const results=await res.json();
+        console.log(results.data);
+        if(results.data) setHistoryData(results.data)
     }
+    
     return (
         <>
             {/* <Navbar /> */}
 
             {/* <Header />
      */}
+            <form onSubmit={(e)=> submitHistory(e)}>
             <div className="container">
                 <div className="wrap">
                     {items.map((item, index) => <SidebarItem key={index} item={item} />)}
@@ -56,45 +61,45 @@ function History() {
                                         placeholder="Enter UHID"
                                         className='uhid' />
                                 </div>  
-                                <button onClick={submitHistory}>Enter</button>
+                                <button type='submit'>Enter</button>
                                 {/* <div className='printbtn'>
                 <button className='print-button'>PRINT</button>
             </div> */}
                                 <h1>History</h1>
                                 <div className='underline'> </div>
                             </div>
-                            { historyData && <div className='history-card-body' ref={componentRef}>
+                            { historyData && <div className='history-card-body' ref={ComponentRef}>
                             <div className='patientname'>
                                 <h4>Name : </h4>
-                                <h4> Patient Full Name </h4>
+                                <h4>{historyData.fname} {historyData.mname} {historyData.lname}</h4>
                             </div>
                             <div className='patientdob'>
                                 <h4>DOB : </h4>
-                                <h4> 27/03/2022 </h4>
+                                <h4>{historyData.dob}</h4>
                             </div>
                             <div className='patientgender'>
                                 <h4>Gender : </h4>
-                                <h4> Male </h4>
+                                <h4>{historyData.gender}</h4>
                             </div>
                             <div className='patientage'>
                                 <h4>Age : </h4>
-                                <h4> 110</h4>
+                                <h4>{historyData.age}</h4>
                             </div>
                             <div className='patientaddress'>
                                 <h4>Address : </h4>
-                                <h4> B-6, ADIT Society behind MBIT nagar, CVM Road, BVMcity, 321654</h4>
+                                <h4>{historyData.city}</h4>
                             </div>
                             <div className='patientbloodgrp'>
                                 <h4>Blood Group : </h4>
-                                <h4> ABCD+-</h4>
+                                <h4>{historyData.blood_grp}</h4>
                             </div>
                             <div className='patientemail'>
                                 <h4>Email id : </h4>
-                                <h4> NA</h4>
+                                <h4>{historyData.email_id}</h4>
                             </div>
                             <div className='patientnumber'>
                                 <h4>Contact NO. : </h4>
-                                <h4> +91 1234567890</h4>
+                                <h4>{historyData.phone_no}</h4>
                             </div>
 
                             <div className='history-patient-summary'>
@@ -160,6 +165,7 @@ function History() {
                     <button className='print-button' onClick={handlePrint}>PRINT</button>
                 </div>
             </div>
+            </form>
         </>
     )
 }
