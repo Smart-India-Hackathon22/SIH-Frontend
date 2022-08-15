@@ -25,7 +25,7 @@ export default class Discharge extends React.Component {
 
   render() {
     const { isOff } = this.state;
-    let title=this.state.isOff? "discharge-hide":"discharge";
+    let title=this.state.isOff? "discharge":"discharge-hide";
     return (
       <>
       <div className="container">
@@ -37,7 +37,7 @@ export default class Discharge extends React.Component {
 
     <form>
                 <label className='uhid-heading'>UHID:</label>
-                <input type="number" placeholder="Enter UHID" className='discharge-uhid-input' required />
+                <input type="number" placeholder="Enter UHID" className='discharge-uhid-input' required  />
                 <button className='submit-button'  onClick={this.handleClick}>SEARCH</button>
 
 </form> 

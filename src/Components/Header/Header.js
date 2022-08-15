@@ -37,6 +37,10 @@ function Header() {
     <div className="wrap">
     { items.map((item, index) => <SidebarItem key={index} item={item} />) }
     </div>
+
+
+
+
     {/* <div className="wrap">
       <ul>
       <li><Link to="/register"
