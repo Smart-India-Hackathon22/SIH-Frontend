@@ -225,13 +225,7 @@ function Discharge() {
                                             </tr>
                                         </table>
                                     </div>
-                                    <div className="discharge">
-                                        <div className="discharge-body">
-                                            <div className="discharge-body-heading">
-                                                <h1>Discharge Summary</h1>
-                                            </div>
-
-
+                                        
                                             <h2>Recommendations :</h2>
 
 
@@ -291,9 +285,9 @@ function Discharge() {
                                                 </center>
 
                                         
-                                        </div>
+                                        
 
-                                    </div>
+                            
 
 
                                 </div>}
