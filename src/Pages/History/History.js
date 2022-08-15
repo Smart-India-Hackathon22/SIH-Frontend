@@ -21,7 +21,7 @@ function History() {
     });
 
 
-    const [uhid, setuhid] = useState(0);
+    const [uhid, setuhid] = useState();
     const [historyData, setHistoryData] = useState();
     async function submitHistory(event) {
         event.preventDefault();
@@ -59,47 +59,57 @@ function History() {
                                         onChange={(e) => setuhid(e.target.value)}
                                         value={uhid}
                                         placeholder="Enter UHID"
-                                        className='uhid' />
+                                        className='uhid'
+                                        required />
                                 </div>  
-                                <button type='submit'>Enter</button>
+                                <button type='submit' className='submit-button'>Enter</button>
                                 {/* <div className='printbtn'>
                 <button className='print-button'>PRINT</button>
-            </div> */}
-                                <h1>History</h1>
-                                <div className='underline'> </div>
-                            </div>
+            </div> */} </div>
+                               
+                           
                             { historyData && <div className='history-card-body' ref={ComponentRef}>
+                                <div className='flex-historyheading-print'>
+                            <h1 className='history-heading'>History</h1>
+                    <button className='print-button' onClick={handlePrint}>PRINT</button>
+
+                            </div>
+                                <div className='underline'> </div>
+                                <div className='patientid'>
+                                <h4 className="fieldname-style"> Patient Registration ID : </h4>
+                                <h4 className='dataname-style'>{historyData.registration_no} </h4>
+                            </div>
                             <div className='patientname'>
-                                <h4>Name : </h4>
-                                <h4>{historyData.fname} {historyData.mname} {historyData.lname}</h4>
+                                <h4 className="fieldname-style"> Patient Full Name : </h4>
+                                <h4 className='dataname-style'>{historyData.fname} {historyData.mname} {historyData.lname}</h4>
                             </div>
                             <div className='patientdob'>
-                                <h4>DOB : </h4>
-                                <h4>{historyData.dob}</h4>
+                                <h4 className="fieldname-style">Date of Birth : </h4>
+                                <h4 className='dataname-style'>{historyData.dob}</h4>
                             </div>
                             <div className='patientgender'>
-                                <h4>Gender : </h4>
-                                <h4>{historyData.gender}</h4>
+                                <h4 className="fieldname-style">Gender : </h4>
+                                <h4 className='dataname-style'>{historyData.gender}</h4>
                             </div>
                             <div className='patientage'>
-                                <h4>Age : </h4>
-                                <h4>{historyData.age}</h4>
+                                <h4 className="fieldname-style">Age : </h4>
+                                <h4 className='dataname-style'>{historyData.age}</h4>
                             </div>
                             <div className='patientaddress'>
-                                <h4>Address : </h4>
-                                <h4>{historyData.city}</h4>
+                                <h4 className="fieldname-style">Address (cityname) : </h4>
+                                <h4 className='dataname-style'>{historyData.city}</h4>
                             </div>
                             <div className='patientbloodgrp'>
-                                <h4>Blood Group : </h4>
-                                <h4>{historyData.blood_grp}</h4>
+                                <h4 className="fieldname-style">Blood Group : </h4>
+                                <h4 className='dataname-style'>{historyData.blood_grp}</h4>
                             </div>
                             <div className='patientemail'>
-                                <h4>Email id : </h4>
-                                <h4>{historyData.email_id}</h4>
+                                <h4 className="fieldname-style">Email id : </h4>
+                                <h4 className='dataname-style'>{historyData.email_id}</h4>
                             </div>
                             <div className='patientnumber'>
-                                <h4>Contact NO. : </h4>
-                                <h4>{historyData.phone_no}</h4>
+                                <h4 className="fieldname-style">Contact NO. : </h4>
+                                <h4 className='dataname-style'>{historyData.phone_no}</h4>
                             </div>
 
                             <div className='history-patient-summary'>
@@ -159,10 +169,10 @@ function History() {
                                         </tr>
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>}
                     </div>
-                    <button className='print-button' onClick={handlePrint}>PRINT</button>
                 </div>
             </div>
             </form>
