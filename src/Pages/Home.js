@@ -19,7 +19,7 @@ function Home() {
         </div>
         <div className="login-card-body">
           <div className="login-card-header">
-            <center>`           `
+            <center>
               <h1>Login Page</h1>
             </center>
           </div>
