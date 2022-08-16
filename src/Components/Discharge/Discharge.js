@@ -10,7 +10,7 @@ import "./Discharge.css"
 import ReactDOM from 'react-dom';
 
 function Discharge() {
-    const [uhid, setuhid] = useState(0);
+    const [uhid, setuhid] = useState();
     const [dischargeData, setDischargeData] = useState();
     async function submitDischarge(event) {
         event.preventDefault();

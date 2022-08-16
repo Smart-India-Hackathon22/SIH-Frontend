@@ -64,7 +64,7 @@
 
 .container .history{
     color: black;
-    
+    margin-left: 300px;
 }
 .flex-historyheading-print{
     display: flex;
