@@ -14,12 +14,13 @@
     width: 150px;
     height: 40px;
     margin-left: 20px;
+    padding-left: 10px;
 }
 
 .discharge{
     color: black;
     display: block;
-    margin: 0%;
+    margin-left: 300px;
     width: 1500px;
     height: 100%;
 }

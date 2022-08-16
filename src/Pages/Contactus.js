@@ -28,7 +28,7 @@ function Contactus() {
                                 </div>
                             )}
                             </CountUp>
-                            <h1 className="detail">Bed Available</h1>
+                            <h1 className="detail-heading">Bed Available</h1>
 
                         </div>                   
                         </div>   
@@ -43,7 +43,7 @@ function Contactus() {
                                 </div>
                             )}
                             </CountUp>
-                            <h1 className="detail">Recoverd patient</h1>
+                            <h1 className="detail-heading">Recoverd patient</h1>
 
                         </div>                   
                         </div>
@@ -58,7 +58,7 @@ function Contactus() {
                                 </div>
                             )}
                             </CountUp>
-                            <h1 className="detail">In Patient </h1>
+                            <h1 className="detail-heading">In Patient </h1>
 
                         </div>  
                         </div>  
@@ -73,7 +73,7 @@ function Contactus() {
                                 </div>
                             )}
                             </CountUp>
-                        <h1 className="detail">Open Hospital</h1>
+                        <h1 className="detail-heading">Open Hospital</h1>
                         </div>      
 
                              </div>

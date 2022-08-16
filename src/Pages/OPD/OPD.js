@@ -17,7 +17,7 @@ function OPD() {
  { items.map((item, index) => <SidebarItem key={index} item={item} />) }
  </div>
  
-    <section className='opduser'>
+    <div className='opduser'>
     <div className="opduser-container">
     <div className="opduser-header">
     <h1>OPD User Dashboard</h1>
@@ -29,24 +29,33 @@ function OPD() {
                 <input type="text" placeholder="Enter UHID" className='uhid'/>
                 </div>                        
                     <div className='opd-body'>
-                    <div className='patientname'>
-                        <h4>Name : </h4>
+                    <div className='opdpatientname'>
+                        <h4>Patient Full Name : </h4>
                         <h4> Patient Full Name </h4>
                     </div>
                 
-                    <div className='patientgender'>
+                    <div className='opdpatientgender'>
                     <h4>Gender : </h4>
                         <h4> Male </h4>
                     </div>
-                    <div className='patientage'>
+                    <div className='opdpatientage'>
                     <h4>Age : </h4>
                         <h4> 110</h4>
                     </div>
-                    <div className='patientaddress'>
+                    <div className='opdpatientaddress'>
                     <h4>Address : </h4>
                         <h4> B-6, ADIT Society behind MBIT nagar, CVM Road, BVMcity, 321654</h4>
                     </div>
                     
+                    <div className='assigned-doctor'>
+                    <h4 className='doctor-heading'>Assigned Doctor Name : </h4>
+                    <input type="text" placeholder="Enter Doctor name" className='opd-user-diagnosis'/>    
+                    </div>
+
+                    <div className='next-date'>
+                    <h4 className='nextdate-heading'> Next Appointment : </h4>
+                    <input type="date"  className='opd-user-diagnosis'/>    
+                    </div>
                     <div className='diagnosis'>
                     <h4 className='diagnosis-heading'>Diagnosis : </h4>
                     <input type="text" placeholder="Enter Diagnosis" className='opd-user-diagnosis'/>    
@@ -199,7 +208,7 @@ function OPD() {
                 <button className='save'>Save Data </button>
                 <button className='save'>Print </button>
                </div>
-    </section>
+    </div>
 
 
 </div>

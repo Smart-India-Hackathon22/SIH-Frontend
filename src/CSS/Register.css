@@ -30,6 +30,7 @@
     width: 300px;
     line-height: 70px;
     height: 100%;
+    position: fixed;
 
 }
 
@@ -119,6 +120,7 @@
     /* height: 962px;  */
     padding-left: 30px;
     padding-top: 20px;
+    margin-left: 300px;
 }
 .registration-heading{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
