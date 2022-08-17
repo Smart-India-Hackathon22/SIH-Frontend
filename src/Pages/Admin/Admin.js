@@ -77,6 +77,13 @@ function Admin() {
     <label className="label">Registration Date.</label>
     <input type="date" className="reg-date" name="rDate" required />
 
+    <label className="label">Hospital Name</label>
+    <select className="select" name="hospitalName" required>
+      <option value="Admin">1</option>
+      <option value="Doctor">2</option>
+      <option value="Receptionist">3</option>
+    </select>
+
     <div className="personal-details">
     <h1 className="registration-heading">
       {" "}

@@ -7,84 +7,86 @@ import Prototype from "./Prototype";
 import Navbar from "../Components/Navbar/Navbar";
 import plus from "../Assets/Images/plus.png";
 import { Link } from "react-router-dom";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { toast, ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
-  const [userName, setUserName] = useState('');
-  const [pass, setPass] = useState('');
-  const [selection, setSelecion] = useState('');
-  const [loading, setLoading] = useState('');
+  // const [userName, setUserName] = useState('');
+  // const [pass, setPass] = useState('');
+  // const [selection, setSelecion] = useState('');
+  // const [loading, setLoading] = useState('');
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
-    if (!userName && !pass && !selection) {
-      return toast.error('Please fill username,password and roletype');
-    }
-    if (!userName) {
-      return toast.error('Please fill username');
-    }
-    if (!pass) {
-      return toast.error('Please fill password');
-    }
-    if (!selection) {
-      return toast.error('Please fill roletype');
-    }
-    try {
-      setLoading(true);
-      const { data } = await axios.post('/verify', {
-        userName,
-        pass,
-        selection,
-      }, {
-        headers: {
-          "Content-type": "application/json;charset=UTF-8"
-        }
-      });
-      setLoading(false);
+  // async function submitHandler(e){
+  //   e.preventDefault();
+    // if (!userName && !pass && !selection) {
+    //   return toast.error('Please fill username,password and roletype');
+    // }
+    // if (!userName) {
+    //   return toast.error('Please fill username');
+    // }
+    // if (!pass) {
+    //   return toast.error('Please fill password');
+    // }
+    // if (!selection) {
+    //   return toast.error('Please fill roletype');
+    // }
+   // try {
+      // setLoading(true);
+      // const { data } = await axios.post('/verify', {
+      //   userName,
+      //   pass,
+      //   selection,
+      // }, {
+      //   headers: {
+      //     "Content-type": "application/json;charset=UTF-8",
+      //     // url: "http://localhost:3000/register"
+      //   }
+      // });
+      // setLoading(false);
 
-      toast.success(data.message, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      // toast.success(data.message, {
+      //   position: "top-right",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      // });
 
       // toast.success(data.message);
-    } catch (err) {
-      setLoading(false);
+   // } 
+   // catch (err) {
+      // setLoading(false);
 
-      toast.error(
-        err.response && err.response.data.message
-          ? err.response.data.message
-          : err.message
-        , {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+      // toast.error(
+      //   err.response && err.response.data.message
+      //     ? err.response.data.message
+      //     : err.message
+      //   , {
+      //     position: "top-right",
+      //     autoClose: 5000,
+      //     hideProgressBar: false,
+      //     closeOnClick: true,
+      //     pauseOnHover: true,
+      //     draggable: true,
+      //     progress: undefined,
+      //   });
 
       // toast.error(
       //   err.response && err.response.data.message
       //     ? err.response.data.message
       //     : err.message
       // )
-    }
+   // }
 
-  }
+  // }
 
   return (
     <>
       {/* <Navbar className="navbar" /> */}
       <div className="background-img"></div>
-      <ToastContainer
+      {/* <ToastContainer
       theme="colored"
         position="top-right"
         autoClose={5000}
@@ -95,7 +97,8 @@ function Home() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+        limit={5}
+      /> */}
       <div className="login-card">
         <div className="login-card-image">
           <img src={plus} alt="PLUS" />
@@ -108,12 +111,13 @@ function Home() {
           </div>
 
           {/* <div className='login-card-body'> */}
-          <form onSubmit={submitHandler}>
+          {/* <form onSubmit={(e)=>submitHandler(e)}> */}
+          <form action="/verify" method="post">
             <div className="form-group">
               <input
                 type="text"
                 name="userName"
-                onChange={(e) => setUserName(e.target.value)}
+                // onChange={(e) => setUserName(e.target.value)}
                 className="form-control"
                 placeholder="Username"
 
@@ -121,12 +125,13 @@ function Home() {
               <input
                 type="password"
                 name="pass"
-                onChange={(e) => setPass(e.target.value)}
+                // onChange={(e) => setPass(e.target.value)}
                 className="form-control"
                 placeholder="Passowrd"
 
               />
-              <select className="form-control" name="selection" onChange={(e) => setSelecion(e.target.value)} >
+              {/* <select className="form-control" name="selection" onChange={(e) => setSelecion(e.target.value)} > */}
+              <select className="form-control" name="selection" >
                 <option value="Select">Select Role</option>
                 <option value="Admin">Admin</option>
                 <option value="Doctor">Doctor</option>
