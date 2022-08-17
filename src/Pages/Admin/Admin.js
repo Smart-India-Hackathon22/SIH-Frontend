@@ -79,12 +79,30 @@ function Admin() {
 
     <label className="label">Hospital Name</label>
     <select className="select" name="hospitalName" required>
-      <option value="Admin">1</option>
-      <option value="Doctor">2</option>
-      <option value="Receptionist">3</option>
+      <option value="Aayush Ayurveda center">Aayush Ayurveda center</option>
+      <option value="DR KALPESH PARIKH , AYUSH HOSPITAL">DR KALPESH PARIKH , AYUSH HOSPITAL</option>
+      <option value="Ayush Hospital Dr.Heli B Sharma">Ayush Hospital Dr.Heli B Sharma</option>
+      <option value="Aaradhya Hospital">Aaradhya Hospital</option>
+      <option value="Aayush Surgical Hospital, Piles Surgeon in Ahmedabad, Laparoscopic Surgeon and Hernia Surgeon in Ahmedabad">Aayush Surgical Hospital, Piles Surgeon in Ahmedabad, Laparoscopic Surgeon and Hernia Surgeon in Ahmedabad</option>
+      <option value="AAYUSH HOSPITAL">AAYUSH HOSPITAL</option>
+      <option value="Khalal,ayush Hospital">Khalal,ayush Hospital</option>
+      <option value="Ayush Hospital">Ayush Hospital</option>
+      <option value="Ayush Hospital">Ayush Hospital</option>
+      <option value="Ayush Hospital">Ayush Hospital</option>
+      <option value="Believers Santhigiri Ayush Aalayam (Ayurveda & siddha Hospital in Thiruvalla)">Believers Santhigiri Ayush Aalayam (Ayurveda & siddha Hospital in Thiruvalla)</option>
+      <option value="Ayush Ayurveda Hospital & Research Centre">Ayush Ayurveda Hospital & Research Centre</option>
+      <option value="Ayush Ayurveda Hospital">Ayush Ayurveda Hospital</option>
+      <option value="Ayush Phc(Nhm,Ayurveda)Kulasekharapuram">Ayush Phc(Nhm,Ayurveda)Kulasekharapuram</option>
+      <option value="Ayushmithra AYUSH Hospital & Research Centre (AAHRC)">Ayushmithra AYUSH Hospital & Research Centre (AAHRC)</option>
+      <option value="Ayush Bhavan Ayurveda Hospital">Ayush Bhavan Ayurveda Hospital</option>
+      <option value="Ayush Prana Center for Multiple Sclerosis">Ayush Prana Center for Multiple Sclerosis</option>
+      <option value="Ayush Ayurveda PHC-NHM Aloor GP-Thrissur Kerala">Ayush Ayurveda PHC-NHM Aloor GP-Thrissur Kerala</option>
+      <option value="Ayush III, Govt Nature Cure Hospital">Ayush III, Govt Nature Cure Hospital</option>
+      <option value="Ayush primary health centre (NHM) ayurveda kurumathur">Ayush primary health centre (NHM) ayurveda kurumathur</option>
     </select>
-
-    <div className="personal-details">
+   
+   
+       <div className="personal-details">
     <h1 className="registration-heading">
       {" "}
       Personal Details
