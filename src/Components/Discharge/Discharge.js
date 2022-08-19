@@ -14,7 +14,7 @@ function Discharge() {
     const [dischargeData, setDischargeData] = useState();
     async function submitDischarge(event) {
         event.preventDefault();
-        const res = await fetch("http://localhost:8000/getdischarge", {
+        const res = await fetch("https://sihcodegemsbackend.herokuapp.com/getdischarge", {
             method: "POST",
             headers: {
                 "Content-type": "application/json;charset=UTF-8"

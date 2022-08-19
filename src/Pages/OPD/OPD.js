@@ -11,7 +11,7 @@ function OPD() {
     const [opdData, setopdData] = useState();
     async function submitOpd(event) {
         event.preventDefault();
-        const res = await fetch("http://localhost:8000/getOpdId", {
+        const res = await fetch("https://sihcodegemsbackend.herokuapp.com/getOpdId", {
             method: "POST",
             headers: {
                 "Content-type": "application/json;charset=UTF-8"

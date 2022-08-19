@@ -26,7 +26,7 @@ function History() {
     async function submitHistory(event) {
         event.preventDefault();
         // const res = await axios.post("http://localhost:8000/gethistory", formdata)
-        const res = await fetch("http://localhost:8000/gethistory",{
+        const res = await fetch("https://sihcodegemsbackend.herokuapp.com/gethistory",{
             method:"POST",
             headers:{
                 "Content-type":"application/json;charset=UTF-8"
