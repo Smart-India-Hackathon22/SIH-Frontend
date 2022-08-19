@@ -39,8 +39,8 @@
     "heroku-postbuild": "npm install --legacy-peer-deps && npm run build"
   },
   "engines": {
-    "node": "8.10.0",
-    "npm": "16.17.0"
+    "node": ">=16.17.0",
+    "npm": ">=8.10.0"
   },
   "eslintConfig": {
     "extends": [
