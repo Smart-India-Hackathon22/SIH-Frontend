@@ -1,1 +1,1 @@
-web: npm instll --legacy-peer-deps && npm start
+web: npm install --legacy-peer-deps && npm start
